@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: http-echo
+spec:
+  selector:
+    matchLabels:
+      app: http-echo
+  template:
+    metadata:
+      labels:
+        app: http-echo
+    spec:
+      containers:
+        - name: http-echo
+          image: jxlwqq/http-echo:latest
+          ports:
+            - containerPort: 8080
+          args:
+            - --text=hello world
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: http-echo
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: http-echo

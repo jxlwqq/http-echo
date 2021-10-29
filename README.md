@@ -2,6 +2,7 @@
 
 HTTP Echo is a go web server that serves the contents it was started with as an HTML page.
 
+### Local
 The default port is 8080, but this is configurable via the `--addr` flag:
 
 ```shell
@@ -9,6 +10,30 @@ The default port is 8080, but this is configurable via the `--addr` flag:
 make go-build
 # start the server
 ./http-echo --text="hello world" --addr=:8080
+```
+
+Then visit http://localhost:8080/ in your browser.
+
+### Docker
+
+To run the server in docker:
+
+```shell
+# docker pull
+docker pull jxlwqq/http-echo:latest
+# docker run
+docker run -p 8080:8080 jxlwqq/http-echo:latest --text="hello world"
+```
+
+Then visit http://localhost:8080/ in your browser.
+
+### Kubernetes
+
+To run the server in kubernetes:
+
+```yaml
+kubectl apply -f http-echo.yaml
+kubectl port-forward services/http-echo 8080:8080
 ```
 
 Then visit http://localhost:8080/ in your browser.
