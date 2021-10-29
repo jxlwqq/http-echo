@@ -5,3 +5,7 @@ go-build:
 .PHONY: docker-buildx
 docker-buildx:
 	docker buildx build -t jxlwqq/http-echo --platform linux/amd64,linux/arm64 --push .
+
+.PHONY: go-test
+go-test:
+	go test -v ./...
