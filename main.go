@@ -23,9 +23,8 @@ func main() {
 	}
 
 	r := gin.Default()
-	r.GET("/", func(c *gin.Context) {
-		c.String(http.StatusOK, *text)
-	})
+	r.GET("/", TextHandler)
+	r.GET("/health", HealthHandler)
 
 	srv := http.Server{
 		Addr:    *addr,
@@ -50,4 +49,14 @@ func main() {
 	}
 
 	log.Println("Server exiting")
+}
+
+func HealthHandler(c *gin.Context) {
+	c.JSON(http.StatusOK, gin.H{
+		"status": "OK",
+	})
+}
+
+func TextHandler(c *gin.Context) {
+	c.String(http.StatusOK, *text)
 }
