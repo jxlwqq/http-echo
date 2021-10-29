@@ -2,7 +2,7 @@
 
 HTTP Echo is a go web server that echos back the arguments given to it. Inspired by [hashicorp/http-echo](https://github.com/hashicorp/http-echo).
 
-Building Multi-Architecture Docker Images With [Buildx](https://docs.docker.com/buildx/working-with-buildx/). Apple chip's users cheers :).
+Building multi-architecture docker images with [Buildx](https://docs.docker.com/buildx/working-with-buildx/). Apple chip's users cheers :).
 
 ### Local
 The default port is 8080, but this is configurable via the `--addr` flag:
