@@ -36,8 +36,26 @@ Then visit http://localhost:8080/ in your browser.
 To run the server in kubernetes:
 
 ```yaml
-kubectl apply -f http-echo.yaml
+kubectl apply -f samples/kubernetes/hello-world/deployment.yaml
+kubectl apply -f samples/kubernetes/hello-world/service.yaml
 kubectl port-forward services/http-echo 8080:8080
 ```
 
 Then visit http://localhost:8080/ in your browser.
+
+
+### Istio
+
+To run the server in istio:
+
+```yaml
+kubectl apply -f samples/istio/http-echo/echo-v1-deployment.yaml
+kubectl apply -f samples/istio/http-echo/echo-v2-deployment.yaml
+kubectl apply -f samples/istio/http-echo/echo-service.yaml
+
+kubectl apply -f samples/istio/http-echo/istio-gateway.yaml
+kubectl apply -f samples/istio/http-echo/istio-virtual-service.yaml
+kubectl apply -f samples/istio/http-echo/istio-destination-rule.yaml
+```
+
+Then visit http://localhost in your browser.
