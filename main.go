@@ -25,6 +25,7 @@ func main() {
 	r := gin.Default()
 	r.GET("/", TextHandler)
 	r.GET("/health", HealthHandler)
+	r.NoRoute(TextHandler)
 
 	srv := http.Server{
 		Addr:    *addr,
