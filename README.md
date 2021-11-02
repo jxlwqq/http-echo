@@ -20,7 +20,7 @@ Then visit http://localhost:8080/ in your browser.
 
 ### Docker
 
-To run the server in docker:
+To run the server in Docker:
 
 ```shell
 # docker pull
@@ -33,7 +33,7 @@ Then visit http://localhost:8080/ in your browser.
 
 ### Kubernetes
 
-To run the server in kubernetes:
+To run the server in Kubernetes:
 
 ```yaml
 kubectl apply -f samples/kubernetes/hello-world/deployment.yaml
@@ -46,7 +46,7 @@ Then visit http://localhost:8080/ in your browser.
 
 ### Istio
 
-To run the server in istio:
+To run the server with Istio in Kubernetes:
 
 ```yaml
 kubectl apply -f samples/istio/http-echo/echo-v1-deployment.yaml
