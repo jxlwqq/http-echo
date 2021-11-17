@@ -17,7 +17,7 @@ spec:
           ports:
             - containerPort: 8080
           args:
-            - --text=hello world
+            - "--text=hello world"
           readinessProbe:
             httpGet:
               path: /health
@@ -30,3 +30,10 @@ spec:
             preStop:
               exec:
                 command: ["sh", "-c", "sleep 10"]
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+            limits:
+              cpu: 100m
+              memory: 100Mi
