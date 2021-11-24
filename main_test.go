@@ -8,6 +8,7 @@ import (
 )
 
 func TestHandlers(t *testing.T) {
+	t.Parallel()
 	r := gin.New()
 	r.GET("/", TextHandler)
 	req, _ := http.NewRequest("GET", "/", nil)
@@ -19,6 +20,7 @@ func TestHandlers(t *testing.T) {
 }
 
 func TestHealthHandler(t *testing.T) {
+	t.Parallel()
 	r := gin.New()
 	r.GET("/health", TextHandler)
 	req, _ := http.NewRequest("GET", "/health", nil)
