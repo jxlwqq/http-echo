@@ -30,3 +30,15 @@ func TestHealthHandler(t *testing.T) {
 		t.Errorf("Wrong status code: %d", resp.Code)
 	}
 }
+
+func TestNotFoundHandler(t *testing.T) {
+	t.Parallel()
+	r := gin.New()
+	r.GET("/你好", TextHandler)
+	req, _ := http.NewRequest("GET", "/你好", nil)
+	resp := httptest.NewRecorder()
+	r.ServeHTTP(resp, req)
+	if resp.Code != http.StatusOK {
+		t.Errorf("Wrong status code: %d", resp.Code)
+	}
+}
