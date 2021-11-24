@@ -1,0 +1,15 @@
+name: kind
+on: [ pull_request, push ]
+
+jobs:
+  kind:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Kind Cluster
+        uses: helm/kind-action@v1.2.0
+      - name: Deploying samples
+        run: |
+          kubectl cluster-info
+          kubectl apply -k ./samples/kubernetes/hello-world/
+          kubectl rollout status deployments.apps http-echo
