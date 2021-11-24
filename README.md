@@ -4,7 +4,7 @@
 
 HTTP Echo is a go web server that echos back the arguments given to it. This is especially useful for demos or a more extensive "hello world" application in Docker or Kubernetes.
 
-Inspired by [hashicorp/http-echo](https://github.com/hashicorp/http-echo). Building multi-architecture docker images with [Docker Buildx](https://docs.docker.com/buildx/working-with-buildx/). Apple chip's users cheers :).
+Inspired by [hashicorp/http-echo](https://github.com/hashicorp/http-echo). Building multi-architecture docker images with [Docker Buildx](https://docs.docker.com/buildx/working-with-buildx/). Apple chip/arm64's users cheers :).
 
 **NOTE**: There are some differences between [jxlwqq/http-echo](https://github.com/jxlwqq/http-echo) and [hashicorp/http-echo](https://github.com/hashicorp/http-echo):
 
