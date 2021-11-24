@@ -3,7 +3,7 @@ module github.com/jxlwqq/http-echo
 go 1.17
 
 require (
-	github.com/gin-gonic/gin v1.7.4
+	github.com/gin-gonic/gin v1.7.6
 	github.com/spf13/pflag v1.0.5
 )
 
