@@ -1,6 +1,6 @@
 # http-echo
 
-[![Testing](https://github.com/jxlwqq/http-echo/actions/workflows/testing.yml/badge.svg)](https://github.com/jxlwqq/http-echo/actions/workflows/testing.yml)
+[![Testing](https://github.com/jxlwqq/http-echo/actions/workflows/testing.yml/badge.svg)](https://github.com/jxlwqq/http-echo/actions/workflows/testing.yml) ![Docker Pulls](https://img.shields.io/docker/pulls/jxlwqq/http-echo)
 
 HTTP Echo is a go web server that echos back the arguments given to it. This is especially useful for demos or a more extensive "hello world" application in Docker or Kubernetes.
 
