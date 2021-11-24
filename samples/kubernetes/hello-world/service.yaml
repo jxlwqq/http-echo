@@ -6,5 +6,7 @@ spec:
   ports:
     - port: 8080
       targetPort: 8080
+      name: http
+      appProtocol: http
   selector:
     app: http-echo

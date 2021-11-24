@@ -9,3 +9,4 @@ spec:
     - port: 8080
       protocol: TCP
       name: http
+      appProtocol: http
