@@ -13,7 +13,7 @@ Inspired by [hashicorp/http-echo](https://github.com/hashicorp/http-echo). Build
 |---|---|---|
 | default expose port | **:8080** | :5678 |
 | args | **"--text=hello**" | "-text=hello" |
-| build with | gin | net/http |
+| build with | gin, pflag | net/http, flag |
 | multi-platform support | yes | no |
 
 ### Local
