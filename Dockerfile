@@ -9,7 +9,7 @@ RUN go mod download
 COPY . .
 RUN CGO_ENABLED=0 GOOS=$TARGETOS GOARCH=$TARGETARCH go build -a -o http-echo main.go
 
-FROM --platform=$TARGETPLATFORM alpine
+FROM gcr.io/distroless/static:nonroot-$TARGETARCH
 WORKDIR /
 COPY --from=builder /workspace/http-echo .
 EXPOSE 8080
